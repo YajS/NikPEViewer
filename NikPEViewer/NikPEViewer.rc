@@ -1,0 +1,258 @@
+//Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TREEBITMAP             BITMAP  DISCARDABLE     "res/1.bmp"
+IDB_TOOLBARBITMAP          BITMAP  DISCARDABLE     "res/Nik_toolbar.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// OPCODE_FILE
+//
+IDB_OPCODE_FILE            OPCODE_FILE  "res/Dumpfile.dat"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+
+IDI_NIKPEVIEWER       ICON         "res/NikPEViewer.ico"
+IDI_SMALL             ICON         "res/small.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_NIKPEVIEWER MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...",             ID_FILE_OPEN
+        MENUITEM "&Close",               ID_FILE_CLOSE
+        MENUITEM                         SEPARATOR
+        MENUITEM                         SEPARATOR
+        MENUITEM "E&xit",                IDM_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&PE Sammary",          IDM_PE_SAMMARY
+        MENUITEM "&PE Headers",          IDM_PE_HEADERS
+        MENUITEM "&PE DataSections",     IDM_PE_DATA_SECTIONS
+        MENUITEM "&PE Import table",     IDM_PE_IMPORT_TABLE
+        MENUITEM "&PE Export table",     IDM_PE_EXPORT_TABLE
+        MENUITEM "&PE Module HTML",      IDM_MODULES_HTML
+        MENUITEM "&PE Module Binary",    IDM_MODULES_BINARY
+        MENUITEM "Code &Dis-assembly",   IDM_PE_DISASSEMBLY
+        MENUITEM                         SEPARATOR
+        MENUITEM "&Show All views",      IDM_SHOW_ALL_VIEW
+        MENUITEM "&Group ALL views",     IDM_GROUP_ALL_VIEW
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",             IDM_CASCADE_ICON
+        MENUITEM "&Arrange Icon",        IDM_ARRANGE_ICON
+        MENUITEM "Tile &Vertical",       IDM_TILE_VERTICAL
+        MENUITEM "Tile &Horizontal",     IDM_TILE_HORIZONTAL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",           IDM_ABOUT
+        MENUITEM "&License ...",         IDM_LICENSE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_NIKPEVIEWER ACCELERATORS
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 200, 100, 230, 74
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About NikPEResourceViewer"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON            IDI_NIKPEVIEWER,IDC_STATIC,14,14,21,20
+    LTEXT           "NikPEResourceViewer, Bita Version 0.0.2.1",IDC_STATIC,42,14,144,8,SS_NOPREFIX
+    LTEXT           "Protable Executable (PE) 32-bits Resource Viewer",IDC_STATIC,42,26,150,8
+    LTEXT           "Copyright (C) 2008 CodeDebug ( www.CodeDebug.com )",IDC_STATIC,42,38,200,8
+    DEFPUSHBUTTON   "OK",IDOK,95,53,50,14,WS_GROUP
+END
+
+IDD_LICENSEBOX DIALOGEX 250, 30, 200, 300
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "CodeDebug PE Resource Viewer's EULA"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON            IDI_NIKPEVIEWER,IDC_STATIC,10,10,21,20
+    CTEXT           "END-USER LICENSE AGREEMENT", IDC_STATIC, 42, 14, 130, 8, SS_NOPREFIX
+    EDITTEXT        IDD_EDITLICENSE, 10, 37, 180, 230, ES_READONLY | ES_MULTILINE | ES_AUTOVSCROLL
+    DEFPUSHBUTTON   "I Agree",IDYES,50,280,50,14,WS_GROUP
+    DEFPUSHBUTTON   "Not Agree",IDNO,110,280,50,14,WS_GROUP
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,2,1
+ PRODUCTVERSION 0,0,2,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "CodeDebug\0"
+            VALUE "FileDescription", "Protable Executable Viewer (Bita v)\0"
+            VALUE "FileVersion", "0, 0, 2, 1\0"
+            VALUE "InternalName", "NIKPEResourceViewer\0"
+            VALUE "LegalCopyright", "Copyright (C) 2008 CodeDebug\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "NikPEResourceViewer.EXE\0"
+            VALUE "ProductName", "PE Viewer\0"
+            VALUE "ProductVersion", "0, 0, 2, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+	"#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+   IDC_NIKPEVIEWER              "NIKPEVIEWER"
+   IDS_APP_TITLE                "NikPEViewer"
+   IDS_FILE_OPEN                "Open File..."
+   IDS_FILE_CLOSE               "Close File"
+   IDS_PE_SAMMARY               "PE Sammary"
+   IDS_PE_HEADERS               "PE Headers"
+   IDS_PE_DATA_SECTIONS         "PE Directory and Sections"
+   IDS_PE_IMPORT_TABLE          "PE Import table"
+   IDS_PE_EXPORT_TABLE          "PE Export table"
+   IDS_MODULES_BINARY           "Module Binary view"
+   IDS_LICENSE                  "Application License"
+   IDS_ABOUT                    "About application"
+   IDS_MODULES_HTML             "Nik HTML Viewer"
+   IDS_PE_DISASSEMBLY           "Code Dis-assembly view"
+END
+
+#endif
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
