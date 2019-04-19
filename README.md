@@ -26,9 +26,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org/>
 
-========================================================================
-    WIN32 APPLICATION : NikPEViewer Project Overview
-========================================================================
+---------------------------------------------------------------
 
 AppWizard has created this NikPEViewer application for you.
 
